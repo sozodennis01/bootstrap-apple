@@ -1,0 +1,17 @@
+body {
+  background: #f5f5f7;
+}
+
+.hero {
+  background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
+}
+
+.hero .lead {
+  max-width: 640px;
+}
+
+.feature-box {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
