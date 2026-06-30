@@ -1,17 +1,22 @@
 body {
-  background: #f5f5f7;
+  background-color: #f5f5f7;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.hero {
-  background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
+.navbar {
+  --bs-navbar-padding-y: 0.35rem;
+  font-size: 0.9rem;
 }
 
-.hero .lead {
-  max-width: 640px;
+.product-hero {
+  min-height: 620px;
 }
 
-.feature-box {
-  background: #ffffff;
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
+.product-image {
+  max-height: 390px;
+  object-fit: contain;
+}
+
+.dark-section {
+  background: #111111;
 }

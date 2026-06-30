@@ -3,67 +3,141 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Apple</title>
+    <title>Apple Bootstrap 5</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
       <div class="container">
-        <a class="navbar-brand fw-semibold" href="#">Bootstrap Apple</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand fw-semibold" href="#home" aria-label="Apple home">
+          <i class="bi bi-apple"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#appleNavbar" aria-controls="appleNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Mac</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">iPad</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">iPhone</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Watch</a></li>
+        <div class="collapse navbar-collapse" id="appleNavbar">
+          <ul class="navbar-nav mx-auto gap-lg-3">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#iphone" role="button" data-bs-toggle="dropdown" aria-expanded="false">iPhone</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#iphone">iPhone 17</a></li>
+                <li><a class="dropdown-item" href="#pro">iPhone 17 Pro</a></li>
+                <li><a class="dropdown-item" href="#compare">Compare Models</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#iphone">iPhone</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pro">Pro</a></li>
+            <li class="nav-item"><a class="nav-link" href="#compare">Compare</a></li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#search" aria-label="Search"><i class="bi bi-search"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="#bag" aria-label="Bag"><i class="bi bi-bag"></i></a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <main>
-      <section class="hero text-center">
+    <main id="home" class="container-fluid px-0">
+      <section id="iphone" class="product-hero bg-white text-center border-bottom">
         <div class="container py-5">
-          <p class="text-uppercase text-secondary fw-semibold mb-2">Your Choice with Bootstrap 5</p>
-          <h1 class="display-3 fw-bold mb-3">Design that feels effortless.</h1>
-          <p class="lead text-secondary mx-auto mb-4">
-            A clean Apple-inspired landing page built with Bootstrap components and custom CSS.
-          </p>
-          <div class="d-flex gap-3 justify-content-center">
+          <h1 class="display-3 fw-semibold mb-1">iPhone 17</h1>
+          <p class="fs-4 mb-3">All new. All screen. All in.</p>
+          <div class="d-flex justify-content-center gap-3 mb-4">
             <a class="btn btn-primary rounded-pill px-4" href="#">Learn more</a>
-            <a class="btn btn-outline-dark rounded-pill px-4" href="#">Buy</a>
+            <a class="btn btn-outline-primary rounded-pill px-4" href="#">Buy</a>
           </div>
+          <img class="img-fluid product-image" src="https://www.apple.com/v/home/images/iphone-17/a/hero_iphone_17__ekga3xh1n5aq_large.jpg" alt="iPhone 17 lineup">
         </div>
       </section>
 
-      <section class="container py-5">
-        <div class="row g-4">
+      <section id="pro" class="product-hero dark-section text-center text-white border-bottom">
+        <div class="container py-5">
+          <h2 class="display-4 fw-semibold mb-1">iPhone 17 Pro</h2>
+          <p class="fs-4 mb-3">Pro power. Pro cameras. Pro design.</p>
+          <div class="d-flex justify-content-center gap-3 mb-4">
+            <a class="btn btn-light rounded-pill px-4" href="#">Learn more</a>
+            <a class="btn btn-outline-light rounded-pill px-4" href="#">Buy</a>
+          </div>
+          <img class="img-fluid product-image" src="https://www.apple.com/v/home/images/iphone-17-pro/a/hero_iphone_17_pro__dbaaq3mt8u2q_large.jpg" alt="iPhone 17 Pro">
+        </div>
+      </section>
+
+      <section id="compare" class="container py-5">
+        <div class="text-center mb-4">
+          <h2 class="display-6 fw-semibold">Which iPhone is right for you?</h2>
+          <p class="text-secondary mb-0">(A simple comparison section using Bootstrap cards and lists.)</p>
+        </div>
+        <div class="row g-3">
           <div class="col-md-4">
-            <div class="feature-box h-100 p-4">
-              <h2 class="h5 fw-bold">Fast</h2>
-              <p class="text-secondary mb-0">Responsive layout powered by Bootstrap 5.</p>
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 fw-bold">iPhone 17</h3>
+                <ul class="mb-0">
+                  <li>Bright display</li>
+                  <li>All-day battery</li>
+                  <li>Great everyday camera</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="feature-box h-100 p-4">
-              <h2 class="h5 fw-bold">Simple</h2>
-              <p class="text-secondary mb-0">Minimal structure with clear visual hierarchy.</p>
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h5 fw-bold">iPhone 17 Pro</h3>
+                <ul class="mb-0">
+                  <li>Pro camera system</li>
+                  <li>Fastest performance</li>
+                  <li>Premium finish</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="feature-box h-100 p-4">
-              <h2 class="h5 fw-bold">Polished</h2>
-              <p class="text-secondary mb-0">Soft spacing, subtle borders, and crisp typography.</p>
+            <div class="card h-100 bg-light">
+              <div class="card-body">
+                <h3 class="h5 fw-bold">Apple Support</h3>
+                <p class="mb-3">Get help choosing, setting up, or trading in your iPhone.</p>
+                <a class="btn btn-dark rounded-pill px-4" href="#">Get help</a>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
 
+    <footer class="bg-light border-top py-4">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <h2 class="h6 fw-bold text-uppercase">Shop and Learn</h2>
+            <ul class="list-unstyled mb-0">
+              <li><a class="link-secondary text-decoration-none" href="#iphone">iPhone</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#pro">iPhone 17 Pro</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#compare">Compare</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h2 class="h6 fw-bold text-uppercase">Apple Store</h2>
+            <ul class="list-unstyled mb-0">
+              <li><a class="link-secondary text-decoration-none" href="#">Find a Store</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Order Status</a></li>
+              <li><a class="link-secondary text-decoration-none" href="#">Shopping Help</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4" id="search">
+            <h2 class="h6 fw-bold text-uppercase">Search</h2>
+            <form class="d-flex gap-2" action="#search">
+              <input class="form-control" type="text" placeholder="Search apple.com" aria-label="Search apple.com">
+              <button class="btn btn-dark" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <span id="bag"></span>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
